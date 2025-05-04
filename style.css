@@ -1,0 +1,305 @@
+/* Reset de márgenes y fuentes */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Fondo y colores generales */
+body {
+    background: #f0f4ff;
+    color: #333;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 10px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    background-color: #0066cc;
+    color: white;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+/* Contenido principal */
+.contenido {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.bienvenida {
+    background-color: #0066cc;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.proximos-partidos, .noticias-destacadas, .estadisticas {
+    background-color: #e0e7ff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #0066cc;
+    font-size: 1.2rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+ul li a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Contacto oculto al inicio */
+.oculto {
+    display: none;
+}
+
+/* Redes sociales */
+.redes-sociales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.social-link {
+    display: inline-block;
+    font-size: 18px;
+    color: #0066cc;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.1) rotate(10deg);
+    color: #004c99;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Barra de navegación inferior */
+.menu-inferior {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0066cc;
+    padding: 10px 0;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Estilo de los iconos y texto en la barra inferior */
+.menu-inferior a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    padding: 5px;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-inferior i {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Animación cuando se pasa el cursor por encima */
+.menu-inferior a:hover i {
+    transform: scale(1.3) rotate(15deg);
+    color: #ffcc00; /* Amarillo dorado */
+}
+
+.menu-inferior a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Efecto de sombra y elevación */
+.menu-inferior a:hover i {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto de transición suave */
+.menu-inferior a {
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilos responsivos para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .menu-inferior {
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 0;
+    }
+
+    .menu-inferior a {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .menu-inferior i {
+        font-size: 30px;
+    }
+
+    .redes-sociales .social-link {
+        font-size: 20px;
+    }
+
+    .social-link {
+        font-size: 22px;
+        transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .social-link:hover {
+        transform: scale(1.2) rotate(10deg);
+    }
+}
+
+.info-club {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background: linear-gradient(135deg, #0077ff, #004c99);
+    padding: 15px 20px;
+    border-left: 5px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.8s ease-out both;
+    transition: transform 0.3s ease;
+}
+
+.info-club:hover {
+    transform: scale(1.03);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Especificaciones para las tablas de Primera División y Sub 23 */
+.tabla-posiciones {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.tabla-posiciones th, .tabla-posiciones td {
+    border: 1px solid #0066cc;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.tabla-posiciones th {
+    background-color: #0066cc;
+    color: white;
+}
+
+.tabla-posiciones tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabla-posiciones tr:hover {
+    background-color: #e0e7ff;
+}
+
+/* Agregar un pequeño espacio entre las tablas */
+.tabla-posiciones + .tabla-posiciones {
+    margin-top: 20px;
+}
+
+/* Centrado de tablas para Primera División y Sub 23 */
+#tabla-primera, #tabla-sub23 {
+    margin: 20px auto;  /* Centrado horizontal */
+    width: 90%; /* Ancho ajustable */
+    border-collapse: collapse;
+}
+
+#tabla-primera th, #tabla-sub23 th,
+#tabla-primera td, #tabla-sub23 td {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    text-align: center;
+}
+
+#tabla-primera th, #tabla-sub23 th {
+    background-color: #0066cc;
+    color: white;
+    font-weight: bold;
+}
+
+#tabla-primera tr:nth-child(even), #tabla-sub23 tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tabla-primera tr:hover, #tabla-sub23 tr:hover {
+    background-color: #ddd;
+}
+/* Centrado de tablas */
+.tabla-centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 90%;  /* Ajusta según lo que necesites */
+  }
+  
+  table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  

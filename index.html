@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Club Social y Deportivo Libertad</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <h1>Club Social y Deportivo Libertad</h1>
+    </header>
+
+    <main class="contenido">
+      <section class="bienvenida">
+        <h2>Bienvenido al Club</h2>
+        <p>¡Estás en el lugar donde la pasión por el fútbol nunca se apaga!</p>
+        <div class="info-club">
+          <p>🏤 Fundación: <strong>16 de febrero de 1955</strong></p>
+          <p>🏟️ Estadio: <strong>Pedro Valente</strong> (Inaugurado el 27 de diciembre de 2022)</p>
+        </div>
+      </section>
+
+      <section class="proximos-partidos">
+        <h3>Próximos Partidos</h3>
+        <ul>
+          <li><strong>SAN LORENZO vs HURACAN</strong> - 10 de Mayo 2025</li>
+          <li><strong>LIBERTAD vs 25 DE MAYO</strong> - 15 de Mayo 2025</li>
+          <li><strong>HERNDEZ vs LIBERTAD</strong> - 20 de Mayo 2025</li>
+        </ul>
+      </section>
+
+      <!-- Sección de Noticias -->
+      <section class="noticias-destacadas oculto">
+        <h3>Noticias Destacadas</h3>
+        <ul>
+          <li><a href="#" onclick="mostrarTabla('primera')">Tabla de Posiciones - Primera División</a></li>
+          <li><a href="#" onclick="mostrarTabla('sub23')">Tabla de Posiciones - Sub 23</a></li>
+          <li><a href="#">UDL</a></li>
+        </ul>
+      </section>
+
+      <section id="contacto" class="contacto oculto">
+        <h3>Contacto</h3>
+        <p>¡Síguenos en nuestras redes sociales o contáctanos directamente!</p>
+        <div class="redes-sociales">
+          <a href="https://wa.me/xxxxxxxxxxx" target="_blank" class="social-link" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="https://www.instagram.com/libertad_nogoya/?hl=es" target="_blank" class="social-link" title="Instagram">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+          <a href="https://www.facebook.com/lobo.libertad.5" target="_blank" class="social-link" title="Facebook">
+            <i class="fab fa-facebook"></i> Facebook
+          </a>
+        </div>
+      </section>
+
+      <!-- Estadísticas (inicialmente oculta) -->
+      <section class="estadisticas oculto">
+        <h3>Estadísticas del Club</h3>
+        <div id="tabla-primera" class="oculto tabla-centro">
+          <h4>Tabla de Posiciones - Primera División</h4>
+          <table border="1">
+            <thead>
+              <tr>
+                <th>Equipo</th>
+                <th>Pts</th>
+                <th>PJ</th>
+                <th>PG</th>
+                <th>PE</th>
+                <th>PP</th>
+                <th>GF</th>
+                <th>GC</th>
+                <th>DIF</th>
+                <th>PRMD</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Equipo 1</td>
+                <td>10</td>
+                <td>4</td>
+                <td>3</td>
+                <td>1</td>
+                <td>0</td>
+                <td>10</td>
+                <td>4</td>
+                <td>6</td>
+                <td>2.50</td>
+              </tr>
+              <tr>
+                <td>Equipo 2</td>
+                <td>4</td>
+                <td>3</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>5</td>
+                <td>5</td>
+                <td>0</td>
+                <td>1.33</td>
+              </tr>
+              <tr>
+                <td>Equipo 3</td>
+                <td>4</td>
+                <td>3</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>2</td>
+                <td>4</td>
+                <td>-2</td>
+                <td>1.33</td>
+              </tr>
+              <tr>
+                <td>Equipo 4</td>
+                <td>4</td>
+                <td>4</td>
+                <td>1</td>
+                <td>1</td>
+                <td>2</td>
+                <td>6</td>
+                <td>8</td>
+                <td>-2</td>
+                <td>1.00</td>
+              </tr>
+              <tr>
+                <td>Equipo 5</td>
+                <td>3</td>
+                <td>3</td>
+                <td>1</td>
+                <td>0</td>
+                <td>2</td>
+                <td>8</td>
+                <td>8</td>
+                <td>0</td>
+                <td>1.00</td>
+              </tr>
+              <tr>
+                <td>Equipo 6</td>
+                <td>3</td>
+                <td>3</td>
+                <td>1</td>
+                <td>0</td>
+                <td>2</td>
+                <td>4</td>
+                <td>6</td>
+                <td>-2</td>
+                <td>1.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div id="tabla-sub23" class="oculto tabla-centro">
+          <h4>Tabla de Posiciones - Sub 23</h4>
+          <table border="1">
+            <thead>
+              <tr>
+                <th>Equipo</th>
+                <th>Pts</th>
+                <th>PJ</th>
+                <th>PG</th>
+                <th>PE</th>
+                <th>PP</th>
+                <th>GF</th>
+                <th>GC</th>
+                <th>DIF</th>
+                <th>PRMD</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Equipo 1</td>
+                <td>9</td>
+                <td>3</td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td>7</td>
+                <td>1</td>
+                <td>6</td>
+                <td>3.00</td>
+              </tr>
+              <tr>
+                <td>Equipo 2</td>
+                <td>5</td>
+                <td>3</td>
+                <td>1</td>
+                <td>2</td>
+                <td>0</td>
+                <td>3</td>
+                <td>1</td>
+                <td>2</td>
+                <td>1.67</td>
+              </tr>
+              <tr>
+                <td>Equipo 3</td>
+                <td>6</td>
+                <td>4</td>
+                <td>1</td>
+                <td>3</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1.50</td>
+              </tr>
+              <tr>
+                <td>Equipo 4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>1</td>
+                <td>0</td>
+                <td>2</td>
+                <td>2</td>
+                <td>3</td>
+                <td>-1</td>
+                <td>1.00</td>
+              </tr>
+              <tr>
+                <td>Equipo 5</td>
+                <td>2</td>
+                <td>3</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>4</td>
+                <td>-2</td>
+                <td>0.67</td>
+              </tr>
+              <tr>
+                <td>Equipo 6</td>
+                <td>1</td>
+                <td>4</td>
+                <td>0</td>
+                <td>1</td>
+                <td>3</td>
+                <td>2</td>
+                <td>8</td>
+                <td>-6</td>
+                <td>0.25</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+      </section>
+    </main>
+
+    <nav class="menu-inferior">
+      <a href="#" id="btn-inicio"><i class="fas fa-home"></i><span>Inicio</span></a>
+      <a href="#" id="btn-noticias"><i class="fas fa-newspaper"></i><span>Noticias</span></a>
+      <a href="#" id="btn-estadisticas"><i class="fas fa-chart-bar"></i><span>Estadísticas</span></a>
+      <a href="#" id="btn-contacto"><i class="fas fa-address-book"></i><span>Contacto</span></a>
+    </nav>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
